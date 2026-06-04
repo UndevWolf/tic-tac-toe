@@ -2,14 +2,20 @@
 
 # tic tac toe main game class.
 class GameRound
-  attr_reader :player_one, :player_two
+  attr_accessor :cell
 
   def initialize
-    puts "Enter Player 1's name: "
-    player_one = gets.chomp
-    puts "Enter Player 2's name: "
-    player_two = gets.chomp
-    @player_one = Player.new(player_one)
-    @player_two = Player.new(player_two)
+    @cell = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+    display_grid
+  end
+
+  def display_grid
+    clear
+    puts "
+    #{@cell[0]}   |   #{@cell[1]}  |  #{@cell[2]}
+  ------|------|------
+    #{@cell[3]}   |   #{@cell[4]}  |  #{@cell[5]}
+  ------|------|------
+    #{@cell[6]}   |   #{@cell[7]}  |  #{@cell[8]}   "
   end
 end
