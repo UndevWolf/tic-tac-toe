@@ -2,7 +2,7 @@
 
 # tic tac toe player class
 class Player
-  attr_accessor :name, :owned_cells
+  attr_accessor :name, :owned_cells, :filled_cells
 
   def initialize(name)
     @name = name
